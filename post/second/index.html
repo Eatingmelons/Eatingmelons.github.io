@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>关于编译 // Eatingmelons</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://eatingmelons.github.io/css/main.min.59023e5fd38d6ecb0e1dfbb295077c3c67e00e3b9eb3feaf34b5a5e6b332897a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关于编译"/>
+<meta name="twitter:description" content="1. 字符串循环移位包含 2. 字符串循环移位 3. 字符串中单词的翻转 4. 两个字符串包含的字符是否完全相同 5. 计算一组字符集合可以组成的回文字符串的最大长度 6. 字符串同构 7. 回文子字符串个数 8. 判断一个整数是否是回文数 9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数   1. 字符串循环移位包含 编程之美 3.1
+s1 = AABCD, s2 = CDAA Return : true  给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。
+s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。
+2. 字符串循环移位 编程之美 2.17
+s = &quot;abcd123&quot; k = 3 Return &quot;123abcd&quot;  将字符串向右循环移动 k 位。"/>
+
+    <meta property="og:title" content="关于编译" />
+<meta property="og:description" content="1. 字符串循环移位包含 2. 字符串循环移位 3. 字符串中单词的翻转 4. 两个字符串包含的字符是否完全相同 5. 计算一组字符集合可以组成的回文字符串的最大长度 6. 字符串同构 7. 回文子字符串个数 8. 判断一个整数是否是回文数 9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数   1. 字符串循环移位包含 编程之美 3.1
+s1 = AABCD, s2 = CDAA Return : true  给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。
+s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。
+2. 字符串循环移位 编程之美 2.17
+s = &quot;abcd123&quot; k = 3 Return &quot;123abcd&quot;  将字符串向右循环移动 k 位。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eatingmelons.github.io/post/second/" />
+<meta property="article:published_time" content="2019-05-26T10:37:43&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-26T10:37:43&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://eatingmelons.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Eatingmelons</h1>
+      <p>CC博客，信奉望远镜与显微镜的哲学</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">关于编译</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 26, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<!-- GFM-TOC -->
+
+<ul>
+<li><a href="#1-字符串循环移位包含">1. 字符串循环移位包含</a></li>
+<li><a href="#2-字符串循环移位">2. 字符串循环移位</a></li>
+<li><a href="#3-字符串中单词的翻转">3. 字符串中单词的翻转</a></li>
+<li><a href="#4-两个字符串包含的字符是否完全相同">4. 两个字符串包含的字符是否完全相同</a></li>
+<li><a href="#5-计算一组字符集合可以组成的回文字符串的最大长度">5. 计算一组字符集合可以组成的回文字符串的最大长度</a></li>
+<li><a href="#6-字符串同构">6. 字符串同构</a></li>
+<li><a href="#7-回文子字符串个数">7. 回文子字符串个数</a></li>
+<li><a href="#8-判断一个整数是否是回文数">8. 判断一个整数是否是回文数</a></li>
+<li><a href="#9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数">9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数</a>
+<!-- GFM-TOC --></li>
+</ul>
+
+<h1 id="1-字符串循环移位包含">1. 字符串循环移位包含</h1>
+
+<p><a href="#">编程之美 3.1</a></p>
+
+<pre><code class="language-html">s1 = AABCD, s2 = CDAA
+Return : true
+</code></pre>
+
+<p>给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。</p>
+
+<p>s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。</p>
+
+<h1 id="2-字符串循环移位">2. 字符串循环移位</h1>
+
+<p><a href="#">编程之美 2.17</a></p>
+
+<pre><code class="language-html">s = &quot;abcd123&quot; k = 3
+Return &quot;123abcd&quot;
+</code></pre>
+
+<p>将字符串向右循环移动 k 位。</p>
+
+<p>将 abcd123 中的 abcd 和 123 单独翻转，得到 dcba321，然后对整个字符串进行翻转，得到 123abcd。</p>
+
+<h1 id="3-字符串中单词的翻转">3. 字符串中单词的翻转</h1>
+
+<p><a href="#">程序员代码面试指南</a></p>
+
+<pre><code class="language-html">s = &quot;I am a student&quot;
+Return &quot;student a am I&quot;
+</code></pre>
+
+<p>将每个单词翻转，然后将整个字符串翻转。</p>
+
+<h1 id="4-两个字符串包含的字符是否完全相同">4. 两个字符串包含的字符是否完全相同</h1>
+
+<p><a href="https://leetcode.com/problems/valid-anagram/description/">242. Valid Anagram (Easy)</a></p>
+
+<pre><code class="language-html">s = &quot;anagram&quot;, t = &quot;nagaram&quot;, return true.
+s = &quot;rat&quot;, t = &quot;car&quot;, return false.
+</code></pre>
+
+<p>可以用 HashMap 来映射字符与出现次数，然后比较两个字符串出现的字符数量是否相同。</p>
+
+<p>由于本题的字符串只包含 26 个小写字符，因此可以使用长度为 26 的整型数组对字符串出现的字符进行统计，不再使用 HashMap。</p>
+
+<pre><code class="language-java">public boolean isAnagram(String s, String t) {
+    int[] cnts = new int[26];
+    for (char c : s.toCharArray()) {
+        cnts[c - 'a']++;
+    }
+    for (char c : t.toCharArray()) {
+        cnts[c - 'a']--;
+    }
+    for (int cnt : cnts) {
+        if (cnt != 0) {
+            return false;
+        }
+    }
+    return true;
+}
+</code></pre>
+
+<h1 id="5-计算一组字符集合可以组成的回文字符串的最大长度">5. 计算一组字符集合可以组成的回文字符串的最大长度</h1>
+
+<p><a href="https://leetcode.com/problems/longest-palindrome/description/">409. Longest Palindrome (Easy)</a></p>
+
+<pre><code class="language-html">Input : &quot;abccccdd&quot;
+Output : 7
+Explanation : One longest palindrome that can be built is &quot;dccaccd&quot;, whose length is 7.
+</code></pre>
+
+<p>使用长度为 256 的整型数组来统计每个字符出现的个数，每个字符有偶数个可以用来构成回文字符串。</p>
+
+<p>因为回文字符串最中间的那个字符可以单独出现，所以如果有单独的字符就把它放到最中间。</p>
+
+<pre><code class="language-java">public int longestPalindrome(String s) {
+    int[] cnts = new int[256];
+    for (char c : s.toCharArray()) {
+        cnts[c]++;
+    }
+    int palindrome = 0;
+    for (int cnt : cnts) {
+        palindrome += (cnt / 2) * 2;
+    }
+    if (palindrome &lt; s.length()) {
+        palindrome++;   // 这个条件下 s 中一定有单个未使用的字符存在，可以把这个字符放到回文的最中间
+    }
+    return palindrome;
+}
+</code></pre>
+
+<h1 id="6-字符串同构">6. 字符串同构</h1>
+
+<p><a href="https://leetcode.com/problems/isomorphic-strings/description/">205. Isomorphic Strings (Easy)</a></p>
+
+<pre><code class="language-html">Given &quot;egg&quot;, &quot;add&quot;, return true.
+Given &quot;foo&quot;, &quot;bar&quot;, return false.
+Given &quot;paper&quot;, &quot;title&quot;, return true.
+</code></pre>
+
+<p>记录一个字符上次出现的位置，如果两个字符串中的字符上次出现的位置一样，那么就属于同构。</p>
+
+<pre><code class="language-java">public boolean isIsomorphic(String s, String t) {
+    int[] preIndexOfS = new int[256];
+    int[] preIndexOfT = new int[256];
+    for (int i = 0; i &lt; s.length(); i++) {
+        char sc = s.charAt(i), tc = t.charAt(i);
+        if (preIndexOfS[sc] != preIndexOfT[tc]) {
+            return false;
+        }
+        preIndexOfS[sc] = i + 1;
+        preIndexOfT[tc] = i + 1;
+    }
+    return true;
+}
+</code></pre>
+
+<h1 id="7-回文子字符串个数">7. 回文子字符串个数</h1>
+
+<p><a href="https://leetcode.com/problems/palindromic-substrings/description/">647. Palindromic Substrings (Medium)</a></p>
+
+<pre><code class="language-html">Input: &quot;aaa&quot;
+Output: 6
+Explanation: Six palindromic strings: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;.
+</code></pre>
+
+<p>从字符串的某一位开始，尝试着去扩展子字符串。</p>
+
+<pre><code class="language-java">private int cnt = 0;
+
+public int countSubstrings(String s) {
+    for (int i = 0; i &lt; s.length(); i++) {
+        extendSubstrings(s, i, i);     // 奇数长度
+        extendSubstrings(s, i, i + 1); // 偶数长度
+    }
+    return cnt;
+}
+
+private void extendSubstrings(String s, int start, int end) {
+    while (start &gt;= 0 &amp;&amp; end &lt; s.length() &amp;&amp; s.charAt(start) == s.charAt(end)) {
+        start--;
+        end++;
+        cnt++;
+    }
+}
+</code></pre>
+
+<h1 id="8-判断一个整数是否是回文数">8. 判断一个整数是否是回文数</h1>
+
+<p><a href="https://leetcode.com/problems/palindrome-number/description/">9. Palindrome Number (Easy)</a></p>
+
+<p>要求不能使用额外空间，也就不能将整数转换为字符串进行判断。</p>
+
+<p>将整数分成左右两部分，右边那部分需要转置，然后判断这两部分是否相等。</p>
+
+<pre><code class="language-java">public boolean isPalindrome(int x) {
+    if (x == 0) {
+        return true;
+    }
+    if (x &lt; 0 || x % 10 == 0) {
+        return false;
+    }
+    int right = 0;
+    while (x &gt; right) {
+        right = right * 10 + x % 10;
+        x /= 10;
+    }
+    return x == right || x == right / 10;
+}
+</code></pre>
+
+<h1 id="9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数">9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数</h1>
+
+<p><a href="https://leetcode.com/problems/count-binary-substrings/description/">696. Count Binary Substrings (Easy)</a></p>
+
+<pre><code class="language-html">Input: &quot;00110011&quot;
+Output: 6
+Explanation: There are 6 substrings that have equal number of consecutive 1's and 0's: &quot;0011&quot;, &quot;01&quot;, &quot;1100&quot;, &quot;10&quot;, &quot;0011&quot;, and &quot;01&quot;.
+</code></pre>
+
+<pre><code class="language-java">public int countBinarySubstrings(String s) {
+    int preLen = 0, curLen = 1, count = 0;
+    for (int i = 1; i &lt; s.length(); i++) {
+        if (s.charAt(i) == s.charAt(i - 1)) {
+            curLen++;
+        } else {
+            preLen = curLen;
+            curLen = 1;
+        }
+
+        if (preLen &gt;= curLen) {
+            count++;
+        }
+    }
+    return count;
+}
+</code></pre>
+
+<p></br><div align="center">💡 </br></br> 更多精彩内容将发布在公众号 <strong>CyC2018</strong>，公众号提供了该项目的离线阅读版本，后台回复&rdquo;下载&rdquo; 即可领取。也提供了一份技术面试复习思维导图，不仅系统整理了面试知识点，而且标注了各个知识点的重要程度，从而帮你理清多而杂的面试知识点，后台回复&rdquo;资料&rdquo; 即可领取。我基本是按照这个思维导图来进行复习的，对我拿到了 BAT 头条等 Offer 起到很大的帮助。你们完全可以和我一样根据思维导图上列的知识点来进行复习，就不用看很多不重要的内容，也可以知道哪些内容很重要从而多安排一些复习时间。</div></br>
+<div align="center"><img width="180px" src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/%E5%85%AC%E4%BC%97%E5%8F%B7.jpg"></img></div></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

